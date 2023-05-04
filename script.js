@@ -109,11 +109,11 @@ decriptionLeft.forEach((left) => {
 });
 
 eventDays.addEventListener("click", function (e) {
-  //if (e.target.classList.contains("event__day")) {
-  //  const { id } = e.target.dataset;
-  //  activeDay(id);
-  //  activeEvents(id);
-  //}
+  if (e.target.classList.contains("event__day")) {
+    const { id } = e.target.dataset;
+    activeDay(id);
+    activeEvents(id);
+  }
 
   const clicked = e.target.closest(".event__day");
   if (!clicked) return;
